@@ -1,0 +1,72 @@
+﻿
+@model List<MVC_Article.Models.Domain.T_data>
+@{
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Todays Article</title>
+</head>
+<style>
+    body {
+        background-color: lightskyblue;
+        height: auto;
+        width: auto;
+    }
+
+</style>
+
+
+<body>
+    @foreach(var tdata in Model)
+    {
+
+
+    
+        <form id="form1" runat="server">
+            <div style="background-color: #34495e; width: 90%;  color: #fff;
+           font-family: Arial; height: 800px; padding: 10px; font-size: 34px;">
+                <div style="height: 1px; background-color: #2ecc71; margin-top: 1px; margin-bottom: 50px;">
+                </div>
+
+                <div style="font-size: 20px; font-family: Futura (Light); font-weight: bold; margin-top:1px; margin-bottom:5px">
+
+                    @tdata.Heading
+                </div>
+                <div style="font-size: 12px; font-family: Futura (Light); font-weight: bold; margin-top: 1px; margin-bottom:50px">
+
+                   By: @tdata.Name
+                </div>
+
+                <div style="font-size: 15px; text-align:left ; font-family: Futura (Light); font-weight: bold; margin-top: 1px;">
+                   
+                    @tdata.body
+
+                </div>
+                <div style="font-size: 15px; font-family: Futura (Light); font-weight: bold; margin-top: 10px; margin-bottom:10px">
+                    @tdata.conclusion
+                </div>
+
+                <div style="height: 1px;  background-color: #e74c3c; margin-top: 100px; margin-bottom: 50px;">
+                </div>
+                <div style="font-size: 20px; text-align:right;height:50px; font-family: Futura (Light); font-weight: bold; margin-top: 10px; height:100px">
+                    This is my second article
+                </div>
+                <div style="height: 1px;  background-color: #3498db; margin-top: 190px; margin-bottom: 10px;">
+                </div>
+                <div style="font-size: 20px; text-align: left; font-family: Futura (Light); font-weight: bold; margin-top: 10px;">
+                    This is my third article.
+                </div>
+
+            </div>
+        </form>
+     }
+    
+
+
+
+</body>
+
+</html>
+
